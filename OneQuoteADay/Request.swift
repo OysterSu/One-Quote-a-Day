@@ -29,9 +29,9 @@ class Request {
             }
             
             guard let data = data else { return }
-                        
+            
             let decoder = JSONDecoder()
-            let quote = try! decoder.decode(Quote.self, from: data)
+            let quote = try? decoder.decode(Quote.self, from: data)
             
             callback(quote, error)
         })
