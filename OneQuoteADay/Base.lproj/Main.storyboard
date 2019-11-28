@@ -22,16 +22,25 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ClW-dB-xfD">
+                                <rect key="frame" x="186" y="575" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="cW3-JL-zYX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Np6-fg-5QX"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cW3-JL-zYX" secondAttribute="trailing" constant="20" id="SLL-a1-ndp"/>
                             <constraint firstItem="cW3-JL-zYX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="WtN-Kx-pfG"/>
+                            <constraint firstItem="ClW-dB-xfD" firstAttribute="top" secondItem="cW3-JL-zYX" secondAttribute="bottom" constant="21.5" id="YzA-cX-hPV"/>
+                            <constraint firstItem="ClW-dB-xfD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="e83-M6-0fa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="authorLabel" destination="ClW-dB-xfD" id="Jjy-ch-ZBa"/>
                         <outlet property="quoteLabel" destination="cW3-JL-zYX" id="6Ad-fB-zrW"/>
                     </connections>
                 </viewController>
