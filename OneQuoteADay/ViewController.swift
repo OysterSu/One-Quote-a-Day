@@ -10,11 +10,24 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var quoteLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        Request.getQuote { (quote, error) in
+            guard let quote = quote else { return }
+            
+            DispatchQueue.main.async {
+                self.quoteLabel.text = quote
+            }
+        }
+    }
 
 }
 

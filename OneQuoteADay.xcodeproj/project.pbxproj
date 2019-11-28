@@ -15,6 +15,7 @@
 		65E490E3238FB75C00B8A92E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65E490E1238FB75C00B8A92E /* LaunchScreen.storyboard */; };
 		65E490EE238FB75C00B8A92E /* OneQuoteADayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E490ED238FB75C00B8A92E /* OneQuoteADayTests.swift */; };
 		65E490F9238FB75C00B8A92E /* OneQuoteADayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E490F8238FB75C00B8A92E /* OneQuoteADayUITests.swift */; };
+		65E49107238FBB8300B8A92E /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E49106238FBB8300B8A92E /* Request.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		65E490F4238FB75C00B8A92E /* OneQuoteADayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OneQuoteADayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		65E490F8238FB75C00B8A92E /* OneQuoteADayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneQuoteADayUITests.swift; sourceTree = "<group>"; };
 		65E490FA238FB75C00B8A92E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65E49106238FBB8300B8A92E /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				65E490D6238FB75A00B8A92E /* AppDelegate.swift */,
 				65E490D8238FB75A00B8A92E /* SceneDelegate.swift */,
 				65E490DA238FB75A00B8A92E /* ViewController.swift */,
+				65E49106238FBB8300B8A92E /* Request.swift */,
 				65E490DC238FB75A00B8A92E /* Main.storyboard */,
 				65E490DF238FB75C00B8A92E /* Assets.xcassets */,
 				65E490E1238FB75C00B8A92E /* LaunchScreen.storyboard */,
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				65E490DB238FB75A00B8A92E /* ViewController.swift in Sources */,
+				65E49107238FBB8300B8A92E /* Request.swift in Sources */,
 				65E490D7238FB75A00B8A92E /* AppDelegate.swift in Sources */,
 				65E490D9238FB75A00B8A92E /* SceneDelegate.swift in Sources */,
 			);
