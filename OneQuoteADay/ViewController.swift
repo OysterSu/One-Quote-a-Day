@@ -24,7 +24,7 @@ class ViewController: UIViewController {
             guard let quote = quote else { return }
             
             DispatchQueue.main.async {
-                self.quoteLabel.text = quote
+                self.quoteLabel.text = quote.quote
             }
         }
     }

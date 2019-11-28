@@ -9,7 +9,7 @@
 import Foundation
 
 class Request {
-    class func getQuote(callback: @escaping (String?, Error?) -> Void) {
+    class func getQuote(callback: @escaping (Quote?, Error?) -> Void) {
         let headers = [
             "x-rapidapi-host": "good-quotes.p.rapidapi.com",
             "x-rapidapi-key": "9FKuxlfisCmshSVcxk5JMEyvdpL0p1JItHIjsncJzBcStEwLUz"
@@ -29,10 +29,9 @@ class Request {
             }
             
             guard let data = data else { return }
-            let json = try? JSONSerialization.jsonObject(with: data, options: [])
-            guard let dict = json as? [String: Any] else { return }
-            
-            let quote = dict["quote"] as! String
+                        
+            let decoder = JSONDecoder()
+            let quote = try! decoder.decode(Quote.self, from: data)
             
             callback(quote, error)
         })
