@@ -21,12 +21,16 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        Request.getQuote { (quote, error) in
-            guard let quote = quote else { return }
-            
+        Request.getQuote { (result) in
             DispatchQueue.main.async {
-                self.quoteLabel.text = quote.quote
-                self.authorLabel.text = quote.author
+                switch result {
+                case .success(let value):
+                    self.quoteLabel.text = value.quote
+                    self.authorLabel.text = value.author
+                case .failure(let error):
+                    self.quoteLabel.text = error.localizedDescription
+                    self.authorLabel.text = ""
+                }
             }
         }
     }

@@ -10,6 +10,10 @@ import Foundation
 
 let decoder = JSONDecoder()
 
+enum ResponseError: Error {
+    case nilData
+}
+
 struct HTTPResponse<T: Codable> {
     let value: T?
     let response: HTTPURLResponse?

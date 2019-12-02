@@ -9,7 +9,7 @@
 import Foundation
 
 class Request {
-    class func getQuote(callback: @escaping (Quote?, Error?) -> Void) {
+    class func getQuote(callback: @escaping (Result<Quote, Error>) -> Void) {
         let url = URL(string: "https://good-quotes.p.rapidapi.com/random")!
         let headers = [
             "x-rapidapi-host": "good-quotes.p.rapidapi.com",
@@ -19,8 +19,8 @@ class Request {
         let request = HTTPRequest(url: url, method: .get, parameters: nil, header: headers)
         let session = URLSession.shared
         let client = HTTPClient(session: session)
-        client.send(request) { (response: HTTPResponse<Quote>?) in
-            callback(response?.value, response?.error)
+        client.send(request) { (response: Result<Quote, Error>) in
+            callback(response)
         }
     }
 }
