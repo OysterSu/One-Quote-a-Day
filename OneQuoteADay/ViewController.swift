@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        Request.getQuote { (result) in
+        ViewModel.getQuote { (result) in
             DispatchQueue.main.async {
                 switch result {
                 case .success(let value):
