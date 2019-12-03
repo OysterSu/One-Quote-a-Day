@@ -11,7 +11,7 @@
 		6519CEF6239574B800A97149 /* HTTPResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6519CEF5239574B800A97149 /* HTTPResponse.swift */; };
 		6519CEF8239574DF00A97149 /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6519CEF7239574DF00A97149 /* HTTPRequest.swift */; };
 		6519CEFC239585A800A97149 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6519CEFB239585A800A97149 /* ViewModel.swift */; };
-		65358AD7238FCA8B00F6B816 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65358AD6238FCA8B00F6B816 /* Quote.swift */; };
+		6519CF00239587F300A97149 /* QuoteResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6519CEFF239587F300A97149 /* QuoteResult.swift */; };
 		65E490D7238FB75A00B8A92E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E490D6238FB75A00B8A92E /* AppDelegate.swift */; };
 		65E490D9238FB75A00B8A92E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E490D8238FB75A00B8A92E /* SceneDelegate.swift */; };
 		65E490DB238FB75A00B8A92E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E490DA238FB75A00B8A92E /* ViewController.swift */; };
@@ -20,7 +20,6 @@
 		65E490E3238FB75C00B8A92E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65E490E1238FB75C00B8A92E /* LaunchScreen.storyboard */; };
 		65E490EE238FB75C00B8A92E /* OneQuoteADayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E490ED238FB75C00B8A92E /* OneQuoteADayTests.swift */; };
 		65E490F9238FB75C00B8A92E /* OneQuoteADayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E490F8238FB75C00B8A92E /* OneQuoteADayUITests.swift */; };
-		65E49107238FBB8300B8A92E /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E49106238FBB8300B8A92E /* Request.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +44,7 @@
 		6519CEF5239574B800A97149 /* HTTPResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPResponse.swift; sourceTree = "<group>"; };
 		6519CEF7239574DF00A97149 /* HTTPRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
 		6519CEFB239585A800A97149 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
-		65358AD6238FCA8B00F6B816 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		6519CEFF239587F300A97149 /* QuoteResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteResult.swift; sourceTree = "<group>"; };
 		65E490D3238FB75A00B8A92E /* OneQuoteADay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneQuoteADay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65E490D6238FB75A00B8A92E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65E490D8238FB75A00B8A92E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,7 +59,6 @@
 		65E490F4238FB75C00B8A92E /* OneQuoteADayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OneQuoteADayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		65E490F8238FB75C00B8A92E /* OneQuoteADayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneQuoteADayUITests.swift; sourceTree = "<group>"; };
 		65E490FA238FB75C00B8A92E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		65E49106238FBB8300B8A92E /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,11 +113,10 @@
 				65E490D8238FB75A00B8A92E /* SceneDelegate.swift */,
 				65E490DA238FB75A00B8A92E /* ViewController.swift */,
 				6519CEFB239585A800A97149 /* ViewModel.swift */,
-				65E49106238FBB8300B8A92E /* Request.swift */,
 				6519CEF3239572AB00A97149 /* HTTPClient.swift */,
 				6519CEF7239574DF00A97149 /* HTTPRequest.swift */,
 				6519CEF5239574B800A97149 /* HTTPResponse.swift */,
-				65358AD6238FCA8B00F6B816 /* Quote.swift */,
+				6519CEFF239587F300A97149 /* QuoteResult.swift */,
 				65E490DC238FB75A00B8A92E /* Main.storyboard */,
 				65E490DF238FB75C00B8A92E /* Assets.xcassets */,
 				65E490E1238FB75C00B8A92E /* LaunchScreen.storyboard */,
@@ -279,12 +276,11 @@
 			files = (
 				65E490DB238FB75A00B8A92E /* ViewController.swift in Sources */,
 				6519CEFC239585A800A97149 /* ViewModel.swift in Sources */,
-				65E49107238FBB8300B8A92E /* Request.swift in Sources */,
 				6519CEF4239572AB00A97149 /* HTTPClient.swift in Sources */,
 				65E490D7238FB75A00B8A92E /* AppDelegate.swift in Sources */,
-				65358AD7238FCA8B00F6B816 /* Quote.swift in Sources */,
 				6519CEF8239574DF00A97149 /* HTTPRequest.swift in Sources */,
 				6519CEF6239574B800A97149 /* HTTPResponse.swift in Sources */,
+				6519CF00239587F300A97149 /* QuoteResult.swift in Sources */,
 				65E490D9238FB75A00B8A92E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
