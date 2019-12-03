@@ -11,7 +11,7 @@ import Foundation
 struct HTTPClient {
     let session: URLSession
     
-    func send<T: Codable>(_ request: HTTPRequest, handler: @escaping (Result<T, Error>) -> Void) {
+    func send<req: HTTPRequest>(_ request: req, handler: @escaping (Result<req.Response, Error>) -> Void) {
         let urlRequest = request.buildRequest()
         let task = session.dataTask(with: urlRequest) { data, response, error in
             guard let data = data else {
@@ -21,7 +21,7 @@ struct HTTPClient {
 
             do {
                 let decoder = JSONDecoder()
-                let value = try decoder.decode(T.self, from: data)
+                let value = try decoder.decode(req.Response.self, from: data)
                 handler(.success(value))
             } catch {
                 handler(.failure(error))
