@@ -11,9 +11,9 @@ import Foundation
 struct QuoteRequest: HTTPRequest {
     typealias Response = QuoteResult
     
-    var url: URL = URL(string: "https://good-quotes.p.rapidapi.com/random")!
-    var method: HTTPMethod = .GET
-    var header: [String : String]?
-    var parameters: [String : Any]?
+    var url: URL
+    var method: HTTPMethod
     var contentType: ContentType = .url
+    var header: [String : String]
+    var parameters: [String : Any] = [:]
 }

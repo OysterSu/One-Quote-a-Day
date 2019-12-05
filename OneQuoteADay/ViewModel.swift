@@ -10,12 +10,13 @@ import Foundation
 
 struct ViewModel {
     static func getQuote(callback: @escaping (Result<QuoteResult, Error>) -> Void) {
+        let url  = URL(string: "https://good-quotes.p.rapidapi.com/random")!
         let headers = [
             "x-rapidapi-host": "good-quotes.p.rapidapi.com",
             "x-rapidapi-key": "9FKuxlfisCmshSVcxk5JMEyvdpL0p1JItHIjsncJzBcStEwLUz"
         ]
         
-        let request = QuoteRequest(header: headers)
+        let request = QuoteRequest(url: url, method: .GET, header: headers)
         let session = URLSession.shared
         let client = HTTPClient(session: session)
         

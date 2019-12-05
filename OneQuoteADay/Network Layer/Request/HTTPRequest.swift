@@ -13,9 +13,10 @@ protocol HTTPRequest {
     
     var url: URL { get }
     var method: HTTPMethod { get }
-    var header: [String: String]? { get }
-    var parameters: [String: Any]? { get }
     var contentType: ContentType { get }
+    var header: [String: String] { get }
+    var parameters: [String: Any] { get }
+    
     var adapters: [RequestAdapter] { get }
 }
 
