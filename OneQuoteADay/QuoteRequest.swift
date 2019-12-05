@@ -15,4 +15,5 @@ struct QuoteRequest: HTTPRequest {
     var method: HTTPMethod = .GET
     var header: [String : String]?
     var parameters: [String : Any]?
+    var contentType: ContentType = .url
 }

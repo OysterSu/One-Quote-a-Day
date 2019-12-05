@@ -15,6 +15,7 @@ protocol HTTPRequest {
     var method: HTTPMethod { get }
     var header: [String: String]? { get }
     var parameters: [String: Any]? { get }
+    var contentType: ContentType { get }
 }
 
 extension HTTPRequest {
