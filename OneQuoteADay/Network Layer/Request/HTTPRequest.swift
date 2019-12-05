@@ -16,17 +16,19 @@ protocol HTTPRequest {
     var header: [String: String]? { get }
     var parameters: [String: Any]? { get }
     var contentType: ContentType { get }
+    var adapters: [RequestAdapter] { get }
 }
 
 extension HTTPRequest {
-    func buildRequest() -> URLRequest {
-        var request = URLRequest(url: url)
-        request.httpMethod = method.rawValue
-        request.allHTTPHeaderFields = header
-        if let parameters = parameters {
-            request.httpBody = parameters.map{"\($0.key)=\($0.value)"}.joined(separator: "&").data(using: .utf8)
-        }
-        
-        return request
+    var adapters: [RequestAdapter] {
+        return [
+            method.adapter,
+            RequestContentAdapter(method: method, contentType: contentType, header: header, parameters: parameters)
+        ]
+    }
+    
+    func buildRequest() throws -> URLRequest {
+        let request = URLRequest(url: url)
+        return try adapters.reduce(request) { try $1.adapted($0) }
     }
 }
