@@ -12,7 +12,7 @@ struct QuoteRequest: HTTPRequest {
     typealias Response = QuoteResult
     
     var url: URL = URL(string: "https://good-quotes.p.rapidapi.com/random")!
-    var method: String = requestMethod.get.rawValue
+    var method: HTTPMethod = .GET
     var header: [String : String]?
     var parameters: [String : Any]?
 }
