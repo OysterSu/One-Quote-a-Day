@@ -12,3 +12,13 @@ enum HTTPMethod: String {
     case GET
     case POST
 }
+
+extension HTTPMethod {
+    var adapter: AnyAdapter {
+        return AnyAdapter { req in
+            var req = req
+            req.httpMethod = self.rawValue
+            
+            return req
+    }}
+}
