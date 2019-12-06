@@ -29,29 +29,8 @@ extension ContentType {
         case .json:
             return JSONRequestDataAdapter(data: parameters)
         case .url:
-            return URLFormRequestDataAdapter(data: parameters)
+            return URLRequestDataAdapter(data: parameters)
         }
     }
-}
-
-struct JSONRequestDataAdapter: RequestAdapter {
-    let data: [String: Any]
     
-    func adapted(_ request: URLRequest) throws -> URLRequest {
-        var request = request
-        request.httpBody = try JSONSerialization.data(withJSONObject: data, options: [])
-        
-        return request
-    }
-}
-
-struct URLFormRequestDataAdapter: RequestAdapter {
-    let data: [String: Any]
-    
-    func adapted(_ request: URLRequest) throws -> URLRequest {
-        var request = request
-        request.httpBody = data.map { "\($0.key)=\($0.value)" }.joined(separator: "&").data(using: .utf8)
-        
-        return request
-    }
 }
