@@ -14,10 +14,12 @@ enum ContentType: String {
 }
 
 extension ContentType {
+    
     var headerAdapter: AnyAdapter {
         return AnyAdapter { req in
             var req = req
-            req.setValue(self.rawValue, forHTTPHeaderField: "Content-Type")
+            req.setValue(self.rawValue, forHTTPHeaderField: "content-type")
+            
             return req
         }
     }
