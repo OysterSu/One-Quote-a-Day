@@ -18,6 +18,7 @@ protocol HTTPRequest {
     var parameters: [String: Any] { get }
     
     var adapters: [RequestAdapter] { get }
+    var decisions: [Decision] { get }
 }
 
 extension HTTPRequest {
@@ -28,6 +29,15 @@ extension HTTPRequest {
             RequestContentAdapter(method: method, contentType: contentType, parameters: parameters)
         ]
     }
+    
+    var decisions: [Decision] {[
+        BadResponseDecision(),
+        DataMappingDecision(
+            condition: { $0.isEmpty },
+            transform: { _ in "{}".data(using: .utf8)! }
+        ),
+        ParseResultDecision()
+    ]}
     
     func buildRequest() throws -> URLRequest {
         let request = URLRequest(url: url)
