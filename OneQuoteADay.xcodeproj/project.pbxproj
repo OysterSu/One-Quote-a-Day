@@ -108,14 +108,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6519CF0923990B4600A97149 /* Network Layer */ = {
+		6519CF0923990B4600A97149 /* NetworkRequest */ = {
 			isa = PBXGroup;
 			children = (
 				6519CEF3239572AB00A97149 /* HTTPClient.swift */,
 				6519CF0A23990BC400A97149 /* Request */,
 				6519CEF5239574B800A97149 /* HTTPResponse.swift */,
 			);
-			path = "Network Layer";
+			path = NetworkRequest;
 			sourceTree = "<group>";
 		};
 		6519CF0A23990BC400A97149 /* Request */ = {
@@ -161,7 +161,7 @@
 				65E490D8238FB75A00B8A92E /* SceneDelegate.swift */,
 				65E490DA238FB75A00B8A92E /* ViewController.swift */,
 				6519CEFB239585A800A97149 /* ViewModel.swift */,
-				6519CF0923990B4600A97149 /* Network Layer */,
+				6519CF0923990B4600A97149 /* NetworkRequest */,
 				6519CF03239608C400A97149 /* QuoteRequest.swift */,
 				6519CEFF239587F300A97149 /* QuoteResult.swift */,
 				6519CF10239987FF00A97149 /* TextSummarizationRequest.swift */,
