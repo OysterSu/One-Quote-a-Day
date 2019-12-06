@@ -14,7 +14,7 @@ protocol HTTPRequest {
     var url: URL { get }
     var method: HTTPMethod { get }
     var contentType: ContentType { get }
-    var header: [String: String] { get }
+    var header: HTTPHeader { get }
     var parameters: [String: Any] { get }
     
     var adapters: [RequestAdapter] { get }
@@ -24,7 +24,8 @@ extension HTTPRequest {
     var adapters: [RequestAdapter] {
         return [
             method.adapter,
-            RequestContentAdapter(method: method, contentType: contentType, header: header, parameters: parameters)
+            header.adapter,
+            RequestContentAdapter(method: method, contentType: contentType, parameters: parameters)
         ]
     }
     

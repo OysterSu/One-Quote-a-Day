@@ -16,7 +16,7 @@ struct ViewModel {
             "x-rapidapi-key": "9FKuxlfisCmshSVcxk5JMEyvdpL0p1JItHIjsncJzBcStEwLUz"
         ]
         
-        let request = QuoteRequest(url: url, method: .GET, header: headers)
+        let request = QuoteRequest(url: url, method: .GET, header: HTTPHeader(headers: headers))
         let session = URLSession.shared
         let client = HTTPClient(session: session)
         

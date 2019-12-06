@@ -12,13 +12,12 @@ struct RequestContentAdapter: RequestAdapter {
     
     let method: HTTPMethod
     let contentType: ContentType
-    let header: [String: String]
     let parameters: [String: Any]
 
     func adapted(_ request: URLRequest) throws -> URLRequest {
         switch method {
         case .GET:
-            return URLQueryDataAdapter(data: header).adapted(request)
+            return URLQueryDataAdapter(data: parameters).adapted(request)
         case .POST:
             let headerAdapter = contentType.headerAdapter
             let dataAdapter = contentType.dataAdapter(for: parameters)
