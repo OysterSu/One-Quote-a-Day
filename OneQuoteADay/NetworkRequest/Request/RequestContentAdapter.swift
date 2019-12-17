@@ -19,11 +19,17 @@ struct RequestContentAdapter: RequestAdapter {
         case .GET:
             return URLQueryDataAdapter(data: parameters).adapted(request)
         case .POST:
-            let headerAdapter = contentType.headerAdapter
-            let dataAdapter = contentType.dataAdapter(for: parameters)
-            let req = try headerAdapter.adapted(request)
+            var req = request
             
-            return try dataAdapter.adapted(req)
+            // Header
+            let headerAdapter = contentType.headerAdapter
+            req = try headerAdapter.adapted(req)
+            
+            // Body
+            let dataAdapter = contentType.dataAdapter(for: parameters)
+            req = try dataAdapter.adapted(req)
+            
+            return req
         }
     }
 }
