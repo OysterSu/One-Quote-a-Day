@@ -10,9 +10,9 @@ import Foundation
 
 struct ViewModel {
     static func getQuote(callback: @escaping (Result<QuoteResult, Error>) -> Void) {
-        let url  = URL(string: "https://good-quotes.p.rapidapi.com/random")!
+        let url  = URL(string: "https://quotable-quotes.p.rapidapi.com/randomQuotes")!
         let headers = [
-            "x-rapidapi-host": "good-quotes.p.rapidapi.com",
+            "x-rapidapi-host": "quotable-quotes.p.rapidapi.com",
             "x-rapidapi-key": "9FKuxlfisCmshSVcxk5JMEyvdpL0p1JItHIjsncJzBcStEwLUz"
         ]
         
