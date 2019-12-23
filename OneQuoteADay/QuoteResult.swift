@@ -9,6 +9,6 @@
 import Foundation
 
 struct QuoteResult: Codable {
-    let quote: String?
-    let author: String?
+    let quote: String
+    let author: String
 }
