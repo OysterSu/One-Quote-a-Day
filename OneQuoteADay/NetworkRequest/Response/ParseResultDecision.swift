@@ -21,6 +21,10 @@ struct ParseResultDecision: Decision {
     {
         do {
             let decoder = JSONDecoder()
+            // Debug 用
+//            let json = try? JSONSerialization.jsonObject(with: data, options: [])
+//            guard let dict = json as? [String: Any] else { return }
+//            print(dict)
             let value = try decoder.decode(Req.Response.self, from: data)
             closure(.done(value))
         } catch {
